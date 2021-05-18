@@ -1,4 +1,4 @@
-# CoWIn-Vaccine-Slot-Checker-Live  🔥
+# CoWin-Vaccine-Slot-Checker-Live  🔥
 This is a Python script runs every 2 minutes and shows all the slots for next 10 days that are available on CoWin website.
 
 ### How does it work or Instructions to use ?
