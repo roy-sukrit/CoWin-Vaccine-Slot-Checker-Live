@@ -107,6 +107,7 @@ class Cowin_Slot:
                     "Date" : Date_today
                 }
                 if(Name == []):
+
                     
                     print("No Slots on " ,days_limit )
                 else:
