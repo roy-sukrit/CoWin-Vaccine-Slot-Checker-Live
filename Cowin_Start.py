@@ -2,7 +2,9 @@ import requests
 import schedule 
 from datetime import datetime, timedelta
 import pandas as pd
-import time 
+import platform
+import subprocess
+import os
 
 class Cowin_Slot:
 
@@ -10,7 +12,18 @@ class Cowin_Slot:
 
         self.district = data      
 
+    def alarm(self):
 
+        if platform.system() == 'Darwin':
+            os.system("afplay " + 'alarm.wav')
+        elif platform.system() == 'Linux':
+            subprocess.call(["aplay", "alarm.wav"])
+        elif platform.system() == 'Windows':
+            import winsound
+            duration = [200,500,200,500,200,500,200,500] 
+            freq = 440  
+            for x in duration:    
+                winsound.Beep(freq, x)
 
 
     def check_slot(self):               
@@ -94,9 +107,12 @@ class Cowin_Slot:
                     "Date" : Date_today
                 }
                 if(Name == []):
+                    
                     print("No Slots on " ,days_limit )
                 else:
-                    print("SLOT AVAILABLE GO TO THE COWIN NOW!!!!!")
+                    self.alarm()
+                    
+                    print("SLOT AVAILABLE GO TO THE COWIN Site NOW!!!!!")
                     print(pd.DataFrame(data_set))
 
 

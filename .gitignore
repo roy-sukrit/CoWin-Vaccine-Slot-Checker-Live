@@ -1,7 +1,8 @@
 chromedriver.exe
 main.py
+beep.py
 
-
+Cowin_Start.exe
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -13,6 +14,7 @@ __pycache__/
 /readme.md
 # C extensions
 *.so
+Cowin_Start
 
 # Distribution / packaging
 .Python
