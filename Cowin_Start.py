@@ -2,7 +2,6 @@ import requests
 import schedule 
 from datetime import datetime, timedelta
 import pandas as pd
-import time 
 import platform
 import subprocess
 import os
